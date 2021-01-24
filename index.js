@@ -6,6 +6,7 @@ const input = document.querySelector('.list-input');
 const alert = document.querySelector('.alert');
 const submitBtn = document.querySelector('.submit-btn');
 const clearBtn = document.querySelector('.clear-btn');
+const search = document.querySelector('.search-input');
 
 
 // edit option
@@ -71,6 +72,25 @@ function addItem(e) {
 
 };
 
+// search items
+
+search.addEventListener('keyup', filterItems)
+
+
+function filterItems() {
+    const text = search.value.toLowerCase();
+    const items = document.querySelectorAll('.list-item');
+
+    Array.from(items).forEach(function (item) {
+        const itemValue = item.firstChild;
+
+        if (itemValue.textContent.toLowerCase().indexOf(text) != -1) {
+            itemValue.parentElement.style.display = "flex";
+        } else {
+            itemValue.parentElement.style.display = "none";
+        }
+    })
+}
 
 // Clear items
 function clearItems() {

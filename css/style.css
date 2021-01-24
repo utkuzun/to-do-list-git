@@ -217,6 +217,18 @@ pre {
   justify-content: space-between;
 }
 
+.search-input{
+  margin-top: 5px;
+  font-size: 15px;
+  border: none;
+  background-color: var(--clr-grey-10);
+  padding: 5px;
+  border-radius: 0;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  width: 10rem;
+}
+
 .list-input{
   font-size: 15px;
   border: none;
